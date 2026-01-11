@@ -1,0 +1,9 @@
+<h2>Products</h2>
+<div class="products-grid">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <h3><%= link_to product.name, product_path(product.slug) %></h3>
+      <div>Rs.<%= product.price %></div>
+    </div>
+  <% end %>
+</div>
